@@ -1,38 +1,150 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.gallery {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    justify-content: center;
+    margin-top: 15px;
+    flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+img {
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.shake {
+	display:inline-block
 }
+.shake {
+	display:block;
+	position:relative;
+}
+@keyframes spaceboots {
+	0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+	10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+	30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+	40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+	50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+	70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+	80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+.shake:hover{ 
+	-webkit-animation-name: spaceboots;
+	-webkit-animation-duration: 0.8s;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+.card{
+  border: 6px solid yellow;
+  border-radius: 8px;
+  max-width: 170px;
+  margin:0 5px;
+  cursor: pointer;
+  box-shadow: 0px 1px 3px darkgray;
+  transition: 0.2s;
+}
+
+.grass{
+  background: rgb(21,51,18);
+background: radial-gradient(circle, rgba(21,51,18,1) 0%, rgba(10,159,26,1) 60%, rgba(0,255,33,1) 100%);
+}
+.fire{
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,166,0,1) 10%, rgba(255,0,0,1) 24%, rgba(255,167,0,1) 39%, rgba(255,0,0,1) 55%, rgba(255,165,0,1) 72%, rgba(255,0,0,1) 87%, rgba(81,34,0,1) 100%);
+}
+  .water{
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,233,255,1) 13%, rgba(0,6,255,1) 27%, rgba(0,246,255,1) 39%, rgba(0,40,255,1) 55%, rgba(0,254,255,1) 72%, rgba(3,0,255,1) 87%, rgba(255,255,255,1) 100%);
+}
+.bug{
+  background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 6%, rgba(133,255,118,1) 27%, rgba(200,197,0,1) 72%, rgba(255,255,255,1) 100%);
+}
+.normal{
+  background: rgb(0,0,0);
+background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(127,127,127,1) 60%, rgba(191,191,191,1) 100%);
+}
+.poison{
+  background: rgb(0,0,0);
+background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(214,0,163,1) 40%, rgba(128,0,128,1) 66%);
+}
+.electric{
+  background: rgb(255,255,255);
+background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(233,255,0,1) 10%, rgba(255,255,255,1) 22%, rgba(241,255,0,1) 34%, rgba(255,255,255,1) 48%, rgba(245,255,0,1) 61%, rgba(255,255,255,1) 74%, rgba(245,255,0,1) 88%, rgba(255,255,255,1) 100%);}
+.ground{
+  background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(200,49,0,1) 27%, rgba(255,170,118,1) 38%, rgba(255,95,0,1) 55%, rgba(255,255,255,1) 100%);
+}
+.fairy{
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 49%, rgba(247,200,255,1) 87%, rgba(255,169,248,1) 100%);
+}
+.ice{
+  background: rgb(255,255,255);
+background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 12%, rgba(185,219,255,1) 24%, rgba(255,255,255,1) 35%, rgba(122,147,255,1) 44%, rgba(255,255,255,1) 53%, rgba(84,69,255,1) 63%, rgba(255,255,255,1) 71%, rgba(20,0,255,1) 81%, rgba(255,255,255,1) 91%, rgba(0,10,109,1) 100%);
+}
+.fighting{
+  background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 69%, rgba(0,0,0,1) 100%);
+}
+.psychic{
+  background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(221,0,255,1) 11%, rgba(255,255,255,1) 22%, rgba(221,0,255,1) 33%, rgba(255,255,255,1) 44%, rgba(221,0,255,1) 55%, rgba(255,255,255,1) 66%, rgba(221,0,255,1) 77%, rgba(255,255,255,1) 88%, rgba(221,0,255,1) 100%);
+}
+.rock{
+  background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(152,79,79,1) 11%, rgba(255,255,255,1) 22%, rgba(128,60,60,1) 33%, rgba(255,255,255,1) 44%, rgba(89,42,42,1) 55%, rgba(255,255,255,1) 66%, rgba(52,23,23,1) 77%, rgba(255,255,255,1) 88%, rgba(0,0,0,1) 100%);
+}
+.ghost{
+  background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(104,104,104,1) 10%, rgba(255,255,255,1) 25%, rgba(104,104,104,1) 40%, rgba(68,68,68,1) 60%, rgba(255,255,255,1) 80%, rgba(104,104,104,1) 91%, rgba(255,255,255,1) 100%);
+}
+.dragon{
+  background: rgb(0,0,0);
+background: linear-gradient(220deg, rgba(0,0,0,1) 0%, rgba(255,206,115,1) 15%, rgba(255,93,93,1) 35%, rgba(255,204,108,1) 50%, rgba(255,255,255,1) 65%, rgba(255,209,124,1) 85%, rgba(0,0,0,1) 100%);
+}
+.steel{
+  background: rgb(255,255,255);
+background: linear-gradient(174deg, rgba(255,255,255,1) 0%, rgba(175,175,175,1) 24%, rgba(136,136,136,1) 32%, rgba(116,116,116,1) 40%, rgba(175,175,175,1) 62%, rgba(136,136,136,1) 71%, rgba(116,116,116,1) 80%, rgba(255,255,255,1) 100%);
+}
+.dark{
+  background: rgb(13,13,13);
+background: radial-gradient(circle, rgba(13,13,13,1) 0%, rgba(255,0,0,1) 13%, rgba(53,53,53,1) 13%, rgba(0,0,0,1) 13%, rgba(13,13,13,1) 76%, rgba(255,0,0,1) 78%, rgba(13,13,13,1) 100%);
+}
+.card:hover{
+  transition: 0.2s;
+  transform: scale(1.09);
+  box-shadow: 0px 1px 9px darkgray;
+}
+.title{
+  padding: 5px;
+  max-width: 100%;
+  text-transform: capitalize;
+  text-align: center;
+  border-bottom: 1px solid silver;
+  white-space: nowrap;
+  margin: 0px;
+}
+.tipo{
+  text-align: center;
+  margin-top: 2px;
+  text-transform: uppercase;
+  font-size: xx-small;
+}
+.cards{
+padding-bottom: 10px;
+}
+.description {
+  margin-left: 10px;
+  text-transform: capitalize;
+}
+.description h5{
+  font-weight: normal;
+}
+span{
+  font-weight: bold;
+}
+

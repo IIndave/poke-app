@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './App.css';
+import pokeball from './assets/pb1.png'
 
 function App() {
 const [result, setResult] = React.useState([]);
@@ -21,14 +22,19 @@ useEffect(() => {fetch('https://pokeapi.co/api/v2/pokemon/?limit=802')
 
 setTimeout(() => {
   setLoading(false);
-}, 2000); 
+}, 3000); 
 
 
 return (
   <div className="App">
   <div className='gallery'>
     { loading ? (
-      <p>Loading...</p>
+        <div className='pokeballs'>
+          <h3>Cargando</h3>
+          <img src={pokeball} className='pb'></img>
+          <img src={pokeball} className='pb'></img>
+          <img src={pokeball} className='pb'></img>
+        </div>
     ) : (
       pokemon.map((img, id) => (
         <div className='cards' id={img.id} key={img.id}>

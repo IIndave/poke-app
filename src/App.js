@@ -44,7 +44,7 @@ return (
             </div>
             <div>
               <h4 className='title'>{img.name}</h4>
-              <h5 className='tipo'>{img.types[0].type.name}</h5>
+              <h5 className={`tipo _${img.types[0].type.name}`}>{img.types[0].type.name}</h5>
               <div className='description'>
                 <h5 className='hp'>{img.stats[0].stat.name} : <span>{img.stats[0].base_stat}</span></h5>
                 <h5 className='attack'>{img.stats[1].stat.name} : <span>{img.stats[1].base_stat}</span></h5>

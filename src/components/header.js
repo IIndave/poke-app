@@ -1,4 +1,5 @@
 import './header.css';
+import App from '../App';
 import pokeball from '../assets/pb1.png';
 import logo from '../assets/logo.png'
 
@@ -10,10 +11,6 @@ export default function Header(){
             <div class="container">
                 <img class='poke' src={pokeball}></img>
                 <img class="logo" src={logo}></img>
-                <form class="d-flex">
-                    <input class="form-control me-2 " type="search" placeholder="Buscar" aria-label="Buscar"/>
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
             </div>
             </nav>
         </div>

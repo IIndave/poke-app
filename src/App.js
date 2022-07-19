@@ -62,8 +62,23 @@ const handleReset = e =>{
   setBusqueda0("")
   setBusqueda2("")
   setBusqueda3("")
-  filtrarHabilidades(e.target.value)
+  resetHabilidades()
 }
+
+const resetHabilidades=()=>{
+  var resultadoReset = tablaPokemon.filter((elemento)=>{
+    if(elemento.stats[0].base_stat >= 0){
+      if(elemento.stats[1].base_stat >= 0){
+        if(elemento.stats[2].base_stat >= 0){
+        return elemento;
+        }
+      }
+    }
+  });
+  console.log(resultadoReset);
+  setPokemon(resultadoReset);
+}
+
 
 const filtrarHp = (hpSeleccionado)=>{
   var resultadoHp = tablaPokemon.filter((elemento)=>{
